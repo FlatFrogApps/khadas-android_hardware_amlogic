@@ -49,7 +49,7 @@ bool HintManager::IsHintSupported(const std::string& hint_type) const {
 }
 
 bool HintManager::DoHint(const std::string& hint_type) {
-    LOG(INFO) << "Do Powerhint: " << hint_type;
+    // LOG(INFO) << "Do Powerhint: " << hint_type;
     return ValidateHint(hint_type)
                ? nm_->Request(actions_.at(hint_type), hint_type)
                : false;
